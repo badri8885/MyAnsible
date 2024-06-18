@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: i want ping all nodes
+    ping:
+
+  - name: i want to install webserver on amazon webserver
+    apt:
+      name: apache2
+      state: absent
+
+  - name: i want to install tree on amazon webserver
+    apt:
+      name: tree
+      state: absent

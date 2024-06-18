@@ -1,0 +1,16 @@
+---
+student:
+ - name: badri
+   phono: 986678898
+   address:
+      drno: 22
+      street: loa
+      pincode: 5783739
+
+ - name: venkat
+   phono: 90888888
+   address:
+      drno: 2323
+      street: loaa
+      pincode: 23234223
+
