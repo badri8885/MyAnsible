@@ -8,9 +8,9 @@
   - name: i want to install webserver on amazon webserver
     apt:
       name: apache2
-      state: absent
+      state: present
 
   - name: i want to install tree on amazon webserver
     apt:
       name: tree
-      state: absent
+      state: present
