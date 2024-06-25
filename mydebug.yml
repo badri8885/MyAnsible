@@ -4,4 +4,8 @@
   tasks:
   - name: i want install direct linux command
     command: hostname -f
-    
+    register: my1stresult
+
+  - name: i want to display first task result
+    debug: 
+       msg: "{{my1stresult}}"
