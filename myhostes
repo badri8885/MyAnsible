@@ -13,8 +13,5 @@
 172.31.8.211
 
 
-[mywebservers:vars]
-myvar01 = abc123
-mywebdebian = apache2
-mywebamazon = httpd
+
 
