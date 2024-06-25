@@ -1,0 +1,18 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: i want to install java on Debian
+    apt: 
+       name: "{{myjavadebian}}"
+       state: present
+    when: ansible_os_family ="Debian"
+
+  - name: i want to install java on amazon
+    yum:
+      name: "{{myjavaamazon}}"
+      state: present
+    when: ansible_os_family ="amazon" 
+       
+
+
