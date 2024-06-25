@@ -5,25 +5,25 @@
   tasks:
   - name: i want to install webserver on Debian nodes
     apt:
-      name: apache2
+      name: "{{mywebdebian}}"
       state: present
     when: ansible_os_family =="Debian"  
 
   - name: i want to start webserver on Debian nodes
     service:
-      name: apache2
+      name: "{{mywebdebian}}"
       state: started
     when: ansible_os_family =="Debian"
 
   - name: i want to install webserver on amazon ansible nodes
     yum:
-      name: httpd
+      name: "{{mywebamazon}}"
       state: present
     when: ansible_os_family =="amazon"
 
   - name: i want to start webserver on amazon ansible nodes
     service:
-      name: httpd
+      name: "{{mywebamazon}}"
       state: started
     when: ansible_os_family =="amazon"
 
