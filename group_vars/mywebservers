@@ -2,5 +2,5 @@
 myvar01 : abc123
 mywebdebian : apache2
 mywebamazon : httpd
-myjavadebian: openjdk-11-jdk
+myjavadebian: openjdk-11-jdk-amd64
 myjavaamazon: java-1.8.0-amazon-correctto-devel
