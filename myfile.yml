@@ -3,3 +3,4 @@
     file:
       path:  /home/debian/mytestfile
       state: touch
+    ignore_errors: yes  
