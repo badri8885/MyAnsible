@@ -1,0 +1,7 @@
+---
+- hosts: 172.31.33.16
+  become: yes
+  tasks:
+  - name: i want install direct linux command
+    command: hostname -f
+    
