@@ -8,10 +8,10 @@
       name: apache2
       state: present
 
-  #- name: copy index file into the node file
-   # copy:
-   #   sre: myindexpage
-   #   dest: /var/www/html/index.html   
+  - name: copy index file into the node file
+    copy:
+      sre: myindexpage
+      dest: /var/www/html/index.html   
 
   - name: copy dynamic file into node
     template:

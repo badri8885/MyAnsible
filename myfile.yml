@@ -1,6 +1,6 @@
 ---
   - name: i want to create mytest file
     file:
-      path:  /home/debian/mytestfile
+      path:  /home/badri/mytestfile
       state: touch
     ignore_errors: yes  
