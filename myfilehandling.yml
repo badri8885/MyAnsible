@@ -18,7 +18,13 @@
     template:
         src: mydynoindex.j2
         dest:  /var/www/html/index.html
-    notify: restartwebserver    
+    notify: restartwebserver  
+
+  - name: download internet files
+    get_url:
+      url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/-tomcat-1apache0.0.20.tar.gz
+      dest: /home/apache-tomcat-10.0.20.tar.gz
+      force_basic_auth: yes    
 
   handlers:
   - name: restartwebserver
