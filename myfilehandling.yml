@@ -8,12 +8,21 @@
       name: apache2
       state: present
 
-  - name: copy index file into the node file
-    copy:
-      sre: myindexpage
-      dest: /var/www/html/index.html   
+ # - name: copy index file into the node file
+  #  copy:
+   #   sre: myindexpage
+    #  dest: /var/www/html/index.html  
+   # notify: restartwebserver   
 
   - name: copy dynamic file into node
     template:
         src: mydynoindex.j2
         dest:  /var/www/html/index.html
+    notify: restartwebserver    
+
+
+  handlers:
+  - name: restartwebserver
+    service:
+        name: apache2
+        state: started     
