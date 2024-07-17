@@ -17,5 +17,7 @@
     apt: 
       name: wget
       state: present
+  - name: i want to ping
+    ping:
 
     
